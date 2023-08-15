@@ -18,5 +18,8 @@ The framework controls what the HouseHold does, and when it does it. This is kno
 
 Another important observation is that the framework's TopCat object can be passed around to various other dependent objects, and when any of these objects change the state of the injected object, then all the other dependent objects which hold a reference to the dependency object have immediate access to those state changes.
 
-It is always the theory of computer science, paradigms, design patterns, etc. which are the most challenging. I understand the theory of DI, and have actually been using it for many years in various situations. I have known for some time about DI being one of Spring's crucial features. I can assure you that this would not be a problem for me.
+It is always the theory of computer science, paradigms, design patterns, etc. which are the most challenging. I understand the theory of DI, and have actually been using it for many years in various situations. For example, the Registrar object in the following system is a dependency object:
 
+https://github.com/PaulGreer1/TheGardenersWeb
+
+I have known for some time about DI being one of Spring's crucial features. I can assure you that this will not be a problem for me.

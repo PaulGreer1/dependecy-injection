@@ -5,51 +5,6 @@ Cats are individuals. Some like to play, some like to hunt, others are very clea
 The following app demontrates the dependency injection (DI) pattern.
 
 ```
-public interface TopCat {
-    String doYourThing();
-}
-
-public class PlayCat implements TopCat {
-    @Override
-    public String doYourThing() {
-        String myThing = "Roll around when tickled, get tangled up in wool, then try to dance on my keyboard and trash my current Java project.";
-        return myThing;
-    }
-}
-
-public class HunterCat implements TopCat {
-    @Override
-    public String doYourThing() {
-        String myThing = "Go on a mouse hunt and minimise the current infestation.";
-        return myThing;
-    }
-}
-
-public class CleanCat implements TopCat {
-    @Override
-    public String doYourThing() {
-        String myThing = "Vacuum the living room carpet, do the washing up, then make me some strong coffee.";
-        return myThing;
-    }
-}
-
-public class HouseHold {
-
-    TopCat cat;
-    
-    HouseHold( TopCat cat ) {
-        this.cat = cat;
-    }
-    
-    public void setCat( TopCat cat ) {
-        this.cat = cat;
-    }
-    
-    public void useCat() {
-        this.cat.doYourThing();
-    }    
-}
-
 public class Main {
 
     public static void main( String[] args ) {
@@ -63,10 +18,56 @@ public class Main {
         TopCat[] cats = { playCat, hunterCat, cleanCat };
 
         HouseHold houseHold = new HouseHold( playCat );
-        
+
         houseHold.setCat( cats[index] );
 
         System.out.println( houseHold.useCat() );
+    }
+}
+
+public class HouseHold {
+
+    TopCat cat;
+
+    HouseHold( TopCat cat ) {
+        this.cat = cat;
+    }
+
+    public void setCat( TopCat cat ) {
+        this.cat = cat;
+    }
+
+    public String useCat() {
+        return this.cat.doYourThing();
+    }
+}
+
+public interface TopCat {
+
+    String doYourThing();
+}
+
+public class PlayCat implements TopCat {
+
+    @Override
+    public String doYourThing() {
+        return "Roll around when tickled, get tangled up in wool, then try to dance on my keyboard and trash my current Java project.";
+    }
+}
+
+public class HunterCat implements TopCat {
+
+    @Override
+    public String doYourThing() {
+        return "Go on a mouse hunt and minimise the current infestation.";
+    }
+}
+
+public class CleanCat implements TopCat {
+
+    @Override
+    public String doYourThing() {
+        return "Vacuum the living room carpet, do the washing up, then make me some strong coffee.";
     }
 }
 

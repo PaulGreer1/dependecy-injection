@@ -1,12 +1,12 @@
 ### Dependency Injection
 
-This app demontrates the dependency injection (DI) pattern.
+This app demontrates the dependency injection (DI) pattern. But first, a few words about cats.
 
 Cats are individuals. Some like to play, some like to hunt, others are very clean. Every household should have a cat, but which type?
 
 It would be very inconvenient for a household to have a cat for each different requirement. Personally, I need only one cat, and I want him to behave differently according to my requirements at any given time.
 
-A household depends on its cat, and the cat is a dependency of the household.
+A household depends on its cat, and the cat is a dependency of the household. Now, please inspect the code in the di-demo app (it is very short and simple), and then run the app a few times. Observe the different outputs. Each output corresponds to a particular type of cat.
 
 Different implementations of the TopCat interface can provide different functionalities depending on the state of the system. In terms of DI, an appropriate TopCat dependency is injected into the HouseHold object given the state of the system at any given time.
 

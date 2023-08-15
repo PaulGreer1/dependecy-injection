@@ -6,13 +6,13 @@ public class Main {
 
     public static void main( String[] args ) {
 
-        Random r = new Random();
-        int index = r.nextInt(0,3);
-
         TopCat playCat = new PlayCat();
         TopCat hunterCat = new HunterCat();
         TopCat cleanCat = new CleanCat();
         TopCat[] cats = { playCat, hunterCat, cleanCat };
+
+        Random r = new Random();
+        int index = r.nextInt(0, cats.length );
 
         HouseHold houseHold = new HouseHold( playCat );
 

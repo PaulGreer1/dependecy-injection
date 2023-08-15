@@ -24,7 +24,7 @@ public class PlayCat implements TopCat {
 
     @Override
     public String doYourThing() {
-        return "Roll around when tickled, get tangled up in wool, then try to dance on my keyboard and trash my current Java project.";
+        return "Roll around when tickled and get tangled up in wool.";
     }
 }
 ```
@@ -44,7 +44,7 @@ public class CleanCat implements TopCat {
 
     @Override
     public String doYourThing() {
-        return "Vacuum the living room carpet, do the washing up, then make me some strong coffee.";
+        return "Vacuum the living room carpet and do the washing up.";
     }
 }
 ```

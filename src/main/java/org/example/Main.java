@@ -18,6 +18,6 @@ public class Main {
 
         houseHold.setCat( cats[index] );
 
-        System.out.println( houseHold.useCat() );
+        System.out.println( "Hey, " + cats[index].getClass().getSimpleName() + " - " + houseHold.useCat() );
     }
 }

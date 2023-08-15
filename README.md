@@ -1,6 +1,6 @@
 ### Dependency Injection
 
-This app demontrates the dependency injection (DI) pattern. But first, a few words about cats.
+This app demontrates the dependency injection (DI) pattern. But first, I need to say a few words about cats.
 
 Cats are individuals. Some like to play, some like to hunt, others are very clean. Every household should have a cat, but which type?
 

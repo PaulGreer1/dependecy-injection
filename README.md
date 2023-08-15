@@ -12,7 +12,7 @@ Different implementations of the TopCat interface can provide different function
 
 In order for the HouseHold object to invoke different cat behaviours at different times, it does not have to instantiate new TopCat objects, it simply declares a mutable variable to hold a reference to the current TopCat object which was last 'injected' into it.
 
-HouseHold and TopCat are loosely coupled. HouseHold objects know nothing about the internals of TopCat objects. This means that the HouseHold object is highly versatile, and the HouseHold class is much easier to develop and maintain. The same code in the HouseHold object can call different behaviours on the current TopCat object, and with a setter method, the same variable can hold different TopCat references at different times. Without DI, the HouseHold object would need to instantiate different TopCat objects as different behavioural requirements arose.
+The HouseHold and TopCat classes are loosely coupled. HouseHold objects know nothing about the internals of TopCat objects. This means that the HouseHold object is highly versatile, and the HouseHold class is much easier to develop and maintain. The same code in the HouseHold object can call different behaviours on the current TopCat object, and with a setter method, the same variable can hold different TopCat references at different times. Without DI, the HouseHold object would need to instantiate different TopCat objects as different behavioural requirements arose.
 
 The framework controls what the HouseHold does, and when it does it. This is known as 'inversion of control' (IoC). The HouseHold class does not have to be modified or developed in order to provide this behavioural versatility.
 
